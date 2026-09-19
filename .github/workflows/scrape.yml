@@ -1,0 +1,50 @@
+name: Competition Hub Daily Scrape
+
+on:
+  schedule:
+    # Runs daily at 01:00 UTC (08:00 WIB)
+    - cron: '0 1 * * *'
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: 'Maximum items to scrape'
+        required: false
+        default: '25'
+
+jobs:
+  scrape-and-sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install Dependencies
+        run: |
+          pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run Test Suite
+        run: |
+          python tests/test_classifier.py
+
+      - name: Execute Scraper Pipeline
+        env:
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+          SPREADSHEET_ID: ${{ secrets.SPREADSHEET_ID }}
+          SHEET_AUDIT_TAB: ${{ vars.SHEET_AUDIT_TAB || 'Tab Audit' }}
+          MAX_ITEMS_PER_RUN: ${{ inputs.limit || '25' }}
+        run: |
+          python main.py
+
+      - name: Commit Updated State & Artifacts
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add data/processed_events.json data/latest_scraped_output.csv data/latest_scraped_output.json data/failed_queue.json 2>/dev/null || true
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore(data): update competition feed and state [skip ci]" && git push)

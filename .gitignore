@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+env/
+venv/
+ENV/
+
+# Logs & temp debug
+*.log
+debug_*.html
+debug_*.json
+*.tar.gz
+
+# Environment & Secrets
+.env
+service_account.json
+credentials.json
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo

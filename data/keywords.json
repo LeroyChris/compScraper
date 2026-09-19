@@ -1,0 +1,223 @@
+{
+  "noise_patterns": [
+    "\\b(lowongan kerja|loker|we are hiring|recruitment|rekrutmen)\\b",
+    "\\b(webinar|seminar nasional|workshop gratis|talkshow online|training berbayar|pelatihan bersertifikat)\\b",
+    "\\b(beasiswa penuh|info beasiswa|program magang|internship batch)\\b"
+  ],
+  "majors": {
+    "Teknik Informatika": {
+      "keywords": {
+        "hackathon": 50,
+        "competitive programming": 50,
+        "capture the flag": 45,
+        "ctf": 45,
+        "web development": 40,
+        "mobile app": 40,
+        "cyber security": 45,
+        "software engineering": 40,
+        "coding competition": 45,
+        "devops": 35,
+        "iot": 35,
+        "game development": 40,
+        "fullstack": 35
+      }
+    },
+    "Sains Data": {
+      "keywords": {
+        "data science": 50,
+        "machine learning": 50,
+        "datathon": 45,
+        "deep learning": 45,
+        "artificial intelligence": 45,
+        "data analytics": 40,
+        "kaggle": 40,
+        "big data": 35,
+        "nlp": 35,
+        "computer vision": 40,
+        "data visualization": 30
+      }
+    },
+    "Sistem Informasi": {
+      "keywords": {
+        "ui/ux": 45,
+        "system design": 40,
+        "it plan": 45,
+        "enterprise architecture": 40,
+        "business intelligence": 40,
+        "it case": 45,
+        "product design": 35,
+        "insys": 35,
+        "audit ti": 40
+      }
+    },
+    "Teknik Sipil": {
+      "keywords": {
+        "teknik sipil": 50,
+        "civil engineering": 50,
+        "bridge design": 45,
+        "jembatan": 45,
+        "makot": 40,
+        "balsa": 45,
+        "beton": 45,
+        "concrete": 45,
+        "structural design": 45,
+        "geoteknik": 40,
+        "autocad": 30,
+        "bim": 35
+      }
+    },
+    "Teknik Elektro": {
+      "keywords": {
+        "teknik elektro": 50,
+        "robotik": 50,
+        "robotics": 50,
+        "plc": 45,
+        "mikrokontroler": 40,
+        "arduino": 40,
+        "renewable energy": 35,
+        "line follower": 45,
+        "pcb design": 40,
+        "telekomunikasi": 35
+      }
+    },
+    "Teknik Mesin": {
+      "keywords": {
+        "teknik mesin": 50,
+        "mechanical engineering": 50,
+        "cad/cam": 45,
+        "solidworks": 45,
+        "otomotif": 40,
+        "aerodinamika": 40,
+        "propulsi": 40,
+        "cnc": 40,
+        "termal": 35
+      }
+    },
+    "Teknik Lingkungan": {
+      "keywords": {
+        "teknik lingkungan": 50,
+        "environmental": 45,
+        "sustainability": 40,
+        "pengolahan limbah": 45,
+        "water treatment": 45,
+        "energi terbarukan": 40,
+        "kualitas udara": 40,
+        "esg": 35,
+        "carbon offset": 35
+      }
+    },
+    "Manajemen Bisnis": {
+      "keywords": {
+        "business plan": 50,
+        "business case": 50,
+        "case competition": 50,
+        "startup pitch": 45,
+        "entrepreneurship": 45,
+        "marketing plan": 45,
+        "kewirausahaan": 40,
+        "business model canvas": 40,
+        "bmc": 35,
+        "pitch deck": 40
+      }
+    },
+    "Akuntansi": {
+      "keywords": {
+        "akuntansi": 50,
+        "accounting": 50,
+        "tax": 45,
+        "pajak": 45,
+        "audit": 40,
+        "financial modeling": 45,
+        "pasar modal": 40,
+        "stock analysis": 40,
+        "financial report": 40,
+        "perpajakan": 45
+      }
+    },
+    "Ilmu Hukum": {
+      "keywords": {
+        "moot court": 50,
+        "peradilan semu": 50,
+        "contract drafting": 45,
+        "legislative drafting": 45,
+        "hukum": 40,
+        "law": 40,
+        "legal": 40,
+        "legal opinion": 45,
+        "debat hukum": 45,
+        "arbitrase": 40,
+        "hak asasi": 35,
+        "konstitusi": 40
+      }
+    },
+    "Psikologi": {
+      "keywords": {
+        "psikologi": 50,
+        "psychology": 50,
+        "mental health": 45,
+        "kesehatan mental": 45,
+        "psychoeducation": 40,
+        "konseling": 40,
+        "alat ukur psikologi": 45,
+        "perilaku organisasi": 35
+      }
+    },
+    "Desain Komunikasi Visual": {
+      "keywords": {
+        "dkv": 50,
+        "desain grafis": 50,
+        "desain": 35,
+        "poster": 45,
+        "poster design": 45,
+        "ilustrasi": 45,
+        "infografis": 45,
+        "videografi": 40,
+        "fotografi": 40,
+        "short movie": 40,
+        "animasi": 45,
+        "branding": 40,
+        "illustration": 40,
+        "logo design": 45
+      }
+    },
+    "Ilmu Komunikasi": {
+      "keywords": {
+        "public relations": 50,
+        "pr campaign": 50,
+        "news anchor": 45,
+        "broadcasting": 45,
+        "jurnalistik": 45,
+        "debat": 40,
+        "speech competition": 45,
+        "podcast": 40,
+        "media campaign": 40
+      }
+    },
+    "Farmasi & Kedokteran": {
+      "keywords": {
+        "farmasi": 50,
+        "kedokteran": 50,
+        "medical olympiad": 50,
+        "karya tulis kedokteran": 45,
+        "penyuluhan kesehatan": 40,
+        "clinical case": 45,
+        "anatomi": 40,
+        "patient counseling": 45,
+        "farmakologi": 45
+      }
+    },
+    "Sastra & Bahasa": {
+      "keywords": {
+        "puisi": 45,
+        "cerpen": 45,
+        "esai sastra": 45,
+        "english debate": 50,
+        "storytelling": 45,
+        "bilingual speech": 45,
+        "penulisan kreatif": 40,
+        "monolog": 40,
+        "translation": 40
+      }
+    }
+  }
+}
