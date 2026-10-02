@@ -14,9 +14,14 @@ on:
 jobs:
   scrape-and-sync:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -48,4 +53,9 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add data/processed_events.json data/master_competitions.json data/latest_scraped_output.csv data/latest_scraped_output.json data/latest_digest.txt data/failed_queue.json 2>/dev/null || true
-          git diff --quiet && git diff --staged --quiet || (git commit -m "chore(data): update competition feed and state [skip ci]" && git push)
+          if ! git diff --quiet || ! git diff --staged --quiet; then
+            git commit -m "chore(data): update competition feed and state [skip ci]"
+            git push
+          else
+            echo "No changes to commit."
+          fi
