@@ -9,8 +9,10 @@
       "keywords": {
         "hackathon": 50,
         "competitive programming": 50,
+        "cp": 40,
         "capture the flag": 45,
         "ctf": 45,
+        "gemastik": 50,
         "web development": 40,
         "mobile app": 40,
         "cyber security": 45,
@@ -29,6 +31,7 @@
         "datathon": 45,
         "deep learning": 45,
         "artificial intelligence": 45,
+        "ai": 35,
         "data analytics": 40,
         "kaggle": 40,
         "big data": 35,
@@ -109,7 +112,9 @@
     "Manajemen Bisnis": {
       "keywords": {
         "business plan": 50,
+        "bpc": 50,
         "business case": 50,
+        "bcc": 50,
         "case competition": 50,
         "startup pitch": 45,
         "entrepreneurship": 45,
@@ -117,7 +122,8 @@
         "kewirausahaan": 40,
         "business model canvas": 40,
         "bmc": 35,
-        "pitch deck": 40
+        "pitch deck": 40,
+        "investment": 40
       }
     },
     "Akuntansi": {
@@ -147,7 +153,8 @@
         "debat hukum": 45,
         "arbitrase": 40,
         "hak asasi": 35,
-        "konstitusi": 40
+        "konstitusi": 40,
+        "law fair": 45
       }
     },
     "Psikologi": {
@@ -217,6 +224,20 @@
         "penulisan kreatif": 40,
         "monolog": 40,
         "translation": 40
+      }
+    },
+    "Karya Tulis Ilmiah & Lintas Disiplin": {
+      "keywords": {
+        "lktin": 50,
+        "lkti": 50,
+        "karya tulis ilmiah": 50,
+        "kti": 45,
+        "esai nasional": 45,
+        "essay competition": 45,
+        "pkm": 45,
+        "pilmapres": 45,
+        "poster ilmiah": 40,
+        "infografis ilmiah": 40
       }
     }
   }

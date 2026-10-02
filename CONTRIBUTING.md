@@ -2,76 +2,102 @@
 
 Terima kasih atas minat Anda berkontribusi pada **Competition Hub Scraper (`compScraper`)**! 
 
-Proyek ini dibuat untuk mendukung mahasiswa menemukan peluang kompetisi yang relevan dan merata di seluruh jurusan.
+Proyek ini dibangun dengan arsitektur modular **Provider Plugin** agar siapapun dapat dengan mudah menambahkan sumber perayap (scraper) baru untuk portal universitas, agregator kompetisi, atau situs kementerian, serta memperkaya sistem klasifikasi jurusan.
 
 ---
 
-## Cara Berkontribusi
+## 3 Area Utama Kontribusi
 
-Ada 3 area utama di mana Anda bisa berkontribusi:
-1. **Memperbarui / Memperkaya Kamus Keyword Jurusan** (`data/keywords.json`).
-2. **Menambahkan Sumber Scraper Baru** (misal: agregator lomba lain, portal kampus `.ac.id`).
-3. **Meningkatkan Akurasi Klasifikasi & Filter Noise**.
-
----
-
-## 1. Menambah / Memperbarui Keyword Jurusan
-
-Kamus jurusan berada di file `data/keywords.json`. 
-
-Format entri:
-```json
-"Nama Jurusan": {
-  "keywords": {
-    "istilah kompetisi": 50,
-    "istilah sekunder": 40
-  }
-}
-```
-- Bobot 50: Sangat spesifik untuk jurusan tersebut (misal: "moot court" untuk Ilmu Hukum).
-- Bobot 35-45: Cukup relevan (misal: "ui/ux" untuk Sistem Informasi).
-- Pastikan kata kunci ditulis dalam huruf kecil (`lowercase`).
+1. **Menambahkan Sumber Scraper Baru** (misal: Puspresnas, Diktiristek, portal lomba UI/ITB/UGM).
+2. **Memperkaya Kamus Keyword & Akronim Jurusan** (`data/keywords.json`).
+3. **Meningkatkan Filter Noise & Logika Deduplikasi**.
 
 ---
 
-## 2. Menambahkan Scraper Sumber Baru
+## 1. Menambahkan Sumber Scraper Baru (Plugin Pattern)
 
-Jika Anda ingin menambahkan sumber web baru:
-1. Analisis apakah situs menggunakan SSR (HTML biasa) atau CSR/AJAX API.
-2. Buat file baru di `src/scrapers/<nama_sumber>.py` (atau tambahkan class baru).
-3. Pastikan output detail sesuai dengan format umum:
-   - `event_id`: ID unik sumber
-   - `title`: Judul lomba
-   - `description`: Deskripsi lengkap
-   - `registration_url`: Link pendaftaran atau guidebook
-   - `source_url`: URL halaman sumber
-   - `source_name`: Nama domain sumber (misal: "kompetisi.id")
-   - `deadline`: Format `YYYY-MM-DD` atau `"TBD"`
-   - `fee`: Biaya pendaftaran ("Gratis", atau nominal)
-4. Patuhi prinsip **Gentle Scraping**:
-   - Selalu beri jeda acak 2–4 detik antar request (`time.sleep`).
-   - Sertakan `User-Agent` yang jelas.
-   - Hormati respons rate limiting (HTTP 429).
+Setiap scraper sumber baru diisolasi sebagai modul mandiri di folder `src/sources/`.
 
----
+### Langkah-langkah Pembuatan Scraper:
 
-## 3. Alur Pengembangan (Git Workflow)
+1. **Buat file provider baru**: `src/sources/<nama_sumber>.py`.
+2. **Inherit dari `BaseScraper`**:
+   ```python
+   from src.models import CompetitionRecord, sanitize_text
+   from src.sources.base import BaseScraper
 
-1. **Fork & Branch**:
-   ```bash
-   git checkout -b feat/tambah-sumber-baru
+   class MyCampusScraper(BaseScraper):
+       source_id = "mycampus"
+       source_name = "Portal Lomba Kampus"
+       base_url = "https://lomba.kampus.ac.id"
+
+       def scrape(self, max_items: int = 25) -> list[CompetitionRecord]:
+           records = []
+           # Implementasi fetch & parse
+           # Kembalikan daftar instance CompetitionRecord
+           return records
    ```
-2. **Setup Lingkungan**:
+3. **Patuhi Skema Kanonikal (`CompetitionRecord`)**:
+   Output wajib menghasilkan objek `CompetitionRecord` yang valid (`src/models.py`). Field otomatis dinormalisasi (emoji dihapus, spasi dibersihkan).
+4. **Daftarkan di `src/sources/__init__.py`**:
+   Tambahkan class scraper Anda ke list `ACTIVE_SOURCES`:
+   ```python
+   from src.sources.mycampus import MyCampusScraper
+
+   ACTIVE_SOURCES: list[type[BaseScraper]] = [
+       InfolombaScraper,
+       MyCampusScraper,
+   ]
+   ```
+5. **Wajib Menyertakan Offline Contract Fixture**:
+   - Simpan sample file HTML/JSON statis di `tests/fixtures/<nama_sumber>/`.
+   - Buat unit test di `tests/` yang memverifikasi bahwa parser Anda berhasil memetakan fixture statis tersebut menjadi `CompetitionRecord` tanpa melakukan network call ke internet saat CI GitHub Actions berjalan.
+
+---
+
+## 2. Memperbarui Kamus Jurusan & Akronim
+
+Kamus berada di `data/keywords.json`.
+- Sistem menggunakan pencocokan **Word Boundary (`\b`)** otomatis, sehingga aman menambahkan akronim pendek (seperti `BPC`, `BCC`, `CP`, `CTF`, `UI/UX`, `BIM`).
+- Pastikan kata kunci ditulis dalam huruf kecil (`lowercase`).
+- Rentang bobot rekomendasi:
+  - `50`: Sangat spesifik untuk bidang tersebut (misal: "moot court", "hackathon", "bpc").
+  - `40 - 45`: Relevan kuat (misal: "startup pitch", "tax olympiad").
+  - `30 - 35`: Istilah pendukung/lintas bidang.
+
+---
+
+## 3. Alur Pengembangan & Pengujian Lokal
+
+1. **Clone & Buat Branch**:
+   ```bash
+   git checkout -b feat/tambah-scraper-puspresnas
+   ```
+2. **Setup Lingkungan Virtual & Install Dependencies**:
    ```bash
    python3 -m venv .venv
    source .venv/bin/activate
    pip install -r requirements.txt
    ```
-3. **Uji Kode Anda**:
-   Pastikan seluruh test lokal lulus sebelum submit PR:
+3. **Jalankan Linter & Format Checker**:
    ```bash
-   python tests/test_classifier.py
+   ruff check .
    ```
-4. **Kirim Pull Request (PR)**:
-   - Buat judul PR yang deskriptif (misal: `feat(classifier): perbaiki bobot keyword dkv`).
-   - Jelaskan perubahan dan lampirkan hasil pengujian singkat.
+4. **Jalankan Test Suite**:
+   ```bash
+   pytest tests/
+   ```
+5. **Test Scraper Secara Terisolasi**:
+   ```bash
+   python main.py --source infolomba --limit 2 --dry-run
+   ```
+
+---
+
+## 4. Checklist Pengajuan Pull Request (PR)
+
+- [ ] Kode baru lolos `ruff check .` tanpa error.
+- [ ] Seluruh unit test lolos `pytest tests/`.
+- [ ] PR menyertakan fixture HTML statis di `tests/fixtures/` untuk scraper baru.
+- [ ] Scraper baru meng-inherit `BaseScraper` dan didaftarkan di `ACTIVE_SOURCES`.
+- [ ] Menggunakan pesan commit yang deskriptif (misal: `feat(sources): add puspresnas competition provider`).

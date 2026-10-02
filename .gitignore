@@ -8,6 +8,12 @@ __pycache__/
 env/
 venv/
 ENV/
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.ruff_cache/
+uv.lock
 
 # Logs & temp debug
 *.log
