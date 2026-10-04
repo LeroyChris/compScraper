@@ -78,5 +78,25 @@
     "scores": {},
     "scraped_at": "2026-10-02 19:07",
     "fingerprint": "fadc5ba5a6f5fc09"
+  },
+  {
+    "id": "infolomba_2149",
+    "source_id": "infolomba",
+    "source_url": "https://infolomba.id/info-probe-2026-2149",
+    "title": "PROBE 2026",
+    "organizer": "BEM FKG Universitas Mulawarman",
+    "location": "Online & Offline (Nasional,Kalimantan Timur)",
+    "target": "SMA / Sederajat, Mahasiswa",
+    "fee": "Start from Rp 85.000 (1 - 20 Okt 2026)",
+    "deadline": "2026-10-20",
+    "registration_url": "https://surl.li/mgwtak",
+    "guidebook_url": "https://surl.li/mgwtak",
+    "description": "PROBE 2026 IS EXTENDED!!",
+    "jurusan": "Umum / Belum Terpetakan",
+    "confidence": 0.0,
+    "status_review": "MANUAL_CHECK",
+    "scores": {},
+    "scraped_at": "2026-10-04 06:30",
+    "fingerprint": "6ecf78ea7d0dd76d"
   }
 ]
