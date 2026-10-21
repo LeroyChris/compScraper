@@ -1,43 +1,54 @@
-=============================================📌 ICON XII & E-DOV Festival IX
-🏢 Penyelenggara: HMJ IE FEB UNRI
-📍 Lokasi: Online & Offline (Nasional,Riau)
-🎯 Sasaran: SMA / Sederajat, Gapyear, Mahasiswa, Umum
-⏳ Deadline: 2026-10-26
-💰 Biaya: Start from Rp 25.000 (12 Sep - 26 Okt 2026)
-🎓 Bidang: Umum / Belum Terpetakan
-🔗 Pendaftaran: https://bit.ly/iconedovfestival2026
-📖 Panduan: https://bit.ly/iconedovfestival2026
-🌐 Sumber: https://infolomba.id/info-icon-xii--edov-festival-ix-2154
-
-📌 HACKATHON ILMU KOMPUTER UNDANA 2026
-🏢 Penyelenggara: ILMU KOMPUTER UNDANA
-📍 Lokasi: Online
+=============================================📌 KRKTN IX (Kompetisi Rekayasa Kualitas Tingkat Nasional IX)
+🏢 Penyelenggara: UNIVERSITAS TRISAKTI
+📍 Lokasi: Offline (Nasional)
 🎯 Sasaran: Mahasiswa
-⏳ Deadline: 2026-10-20
-💰 Biaya: Start from Rp 50.000 (7 Sep - 20 Okt 2026)
-🎓 Bidang: Teknik Informatika
-🔗 Pendaftaran: https://registration.hackathonilkomundana.id/
-📖 Panduan: https://registration.hackathonilkomundana.id/
-🌐 Sumber: https://infolomba.id/info-hackathon-ilmu-komputer-undana-2026-2152
-
-📌 Pringgandana X Pentungan 2026
-🏢 Penyelenggara: PKN STAN
-📍 Lokasi: Online
-🎯 Sasaran: SMA / Sederajat, Gapyear, Mahasiswa, Umum
-⏳ Deadline: 2026-12-01
-💰 Biaya: Start from Rp 30.000 (2 Sep - 1 Des 2026)
+⏳ Deadline: 2026-10-22
+💰 Biaya: Start from Rp 2.000.000 (6 Agu - 22 Okt 2026)
 🎓 Bidang: Umum / Belum Terpetakan
-🔗 Pendaftaran: https://pringpen2026.vercel.app
-📖 Panduan: https://pringpen2026.vercel.app
-🌐 Sumber: https://infolomba.id/info-pringgandana-x-pentungan-2026-2150
+🔗 Pendaftaran: https://bit.ly/m/krktn9
+📖 Panduan: https://bit.ly/panduanKRKTN9
+🌐 Sumber: https://infolomba.id/info-krktn-ix-kompetisi-rekayasa-kualitas-tingkat-nasional-ix-2185
 
-📌 NUSC 2026
-🏢 Penyelenggara: UKM KEWIRAUSAHAAN UNESA
+📌 IE-FAIR 2027
+🏢 Penyelenggara: HIMTI USU
 📍 Lokasi: Online & Offline (Nasional)
 🎯 Sasaran: Mahasiswa
-⏳ Deadline: 2026-10-15
-💰 Biaya: Start from Rp 85.000 (11 Sep - 5 Okt 2026)Start from Rp 100.000 (6 - 15 Okt 2026)
+⏳ Deadline: 2026-11-07
+💰 Biaya: Start from Rp 0 (18 Sep - 7 Nov 2026)
 🎓 Bidang: Umum / Belum Terpetakan
-🔗 Pendaftaran: https://nusc2026.taplink.id
-📖 Panduan: https://nusc2026.taplink.id
-🌐 Sumber: https://infolomba.id/info-nusc-2026-2117
+🔗 Pendaftaran: https://linktr.ee/iefair.tiusu
+📖 Panduan: https://linktr.ee/iefair.tiusu
+🌐 Sumber: https://infolomba.id/info-iefair-2027--2183
+
+📌 ALSA English Week 2026
+🏢 Penyelenggara: ALSA LC UJ
+📍 Lokasi: Online
+🎯 Sasaran: SMA / Sederajat, Mahasiswa
+⏳ Deadline: 2026-10-29
+💰 Biaya: Start from Rp 0 (15 - 29 Okt 2026)
+🎓 Bidang: Umum / Belum Terpetakan
+🔗 Pendaftaran: https://bit.ly/ALSAEngWeekRegistration
+📖 Panduan: https://bit.ly/ALSAEnglishWeek2026
+🌐 Sumber: https://infolomba.id/info-alsa-english-week-2026-2181
+
+📌 7th Indonesia Memory Championship
+🏢 Penyelenggara: Indonesia Memory Sports Council - Supported by IngatanGajah
+📍 Lokasi: Offline (Nasional)
+🎯 Sasaran: SD / Sederajat, SMP / Sederajat, SMA / Sederajat, Gapyear, Mahasiswa, Umum, Guru
+⏳ Deadline: 2026-11-12
+💰 Biaya: Start from Rp 500.000 (10 Okt - 12 Nov 2026)
+🎓 Bidang: Umum / Belum Terpetakan
+🔗 Pendaftaran: https://bit.ly/PendaftaranIMC2026
+📖 Panduan: https://bit.ly/Guideline7thIMC
+🌐 Sumber: https://infolomba.id/info-7th-indonesia-memory-championship-2179
+
+📌 Discovery Christmas National Singing Competition
+🏢 Penyelenggara: Discovery Mall Bali
+📍 Lokasi: Online
+🎯 Sasaran: SD / Sederajat, SMP / Sederajat, SMA / Sederajat, Gapyear, Mahasiswa, Umum
+⏳ Deadline: 2026-12-01
+💰 Biaya: Start from Rp 0 (10 Okt - 1 Nov 2026)Start from Rp 0 (1 Nov - 1 Des 2026)
+🎓 Bidang: Umum / Belum Terpetakan
+🔗 Pendaftaran: https://docs.google.com/forms/d/e/1FAIpQLSfIHB4tLwb30ZZQUaFqWRz0NnsgQPw81d82r0sVSAqfcYT34w/viewform
+📖 Panduan: https://docs.google.com/forms/d/e/1FAIpQLSfIHB4tLwb30ZZQUaFqWRz0NnsgQPw81d82r0sVSAqfcYT34w/viewform
+🌐 Sumber: https://infolomba.id/info-discovery-christmas-national-singing-competition-2177
