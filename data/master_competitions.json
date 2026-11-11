@@ -358,5 +358,25 @@
     "scores": {},
     "scraped_at": "2026-11-10 07:53",
     "fingerprint": "d1e75b471b8dd0be"
+  },
+  {
+    "id": "infolomba_2208",
+    "source_id": "infolomba",
+    "source_url": "https://infolomba.id/info-tfest-pkn-stan-2026-2208",
+    "title": "T-FEST PKN STAN 2026",
+    "organizer": "CENTURY PKN STAN",
+    "location": "Online & Offline (Nasional)",
+    "target": "SMA / Sederajat, Mahasiswa, Umum",
+    "fee": "Start from Rp 0 (19 Okt - 15 Nov 2026)",
+    "deadline": "2026-11-15",
+    "registration_url": "https://staner.id/TreasuryFest2026",
+    "guidebook_url": "https://staner.id/TreasuryFest2026",
+    "description": "TREASURY FESTIVAL 2026 IS BACK! ARE YOU READY?",
+    "jurusan": "Umum / Belum Terpetakan",
+    "confidence": 0.0,
+    "status_review": "MANUAL_CHECK",
+    "scores": {},
+    "scraped_at": "2026-11-11 07:21",
+    "fingerprint": "23094934fcb196d8"
   }
 ]
